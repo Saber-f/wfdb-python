@@ -90,7 +90,7 @@ def find_local_peaks(sig, radius):
         else:
             i += 1
 
-    while i < len(sig):
+    while i < len(sig) - radius:
         if sig[i] == max(sig[i - radius:i + radius]):
             peak_inds.append(i)
             i += radius
